@@ -1,1 +1,1 @@
-# Forest-Fire-Classification-
+# Forest-Fire-Classification
