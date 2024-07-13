@@ -72,19 +72,15 @@ The TensorFlow CNN model described above is a simple but effective model for ima
 To train your model, you would simply need to compile it using an optimizer and loss function of your choice. Then, you could train it on your training data using the model.fit() method. Once the model is trained, you could evaluate it on your test data using the model.evaluate() method. <br>
 
 ### VGG16 
+### Xception
 The model is used for binary image classification, meaning that it will output the probability that an image belongs to one of two classes.
 The code works as follows:
 * The IMG_SIZE variable is defined to specify the height and width of the input images.
-* The vgg16_weight_path variable is defined to specify the path to the VGG16 pre-trained weights file.
-* The base_model variable is created by loading the VGG16 pre-trained model, but excluding the top layer. This is because the top layer is specific to the dataset that the model was trained on, and we want to train our own top layer for our specific binary image classification task.
-* The model_vgg16 variable is created by creating a Sequential model and adding the base_model to it.
-* A Flatten layer is added to the model to convert the feature maps from the base_model into a 1D vector.
-* A Dropout layer is added to the model to prevent overfitting.
-* A Dense layer with 1 unit and a sigmoid activation function is added to the model as the output layer. This layer will output the probability that an image belongs to one of the two classes.
-* The trainable attribute of the base_model is set to False. This means that the weights of the base_model will not be updated during training, which will make the training process more efficient.
-* The model is compiled using the binary_crossentropy loss function and the Adam optimizer. The accuracy metric is also specified, so that we can track the accuracy of the model during training and evaluation.
-* This model is likely to achieve good performance on a variety of binary image classification tasks. However, it is important to note that the VGG16 pre-trained weights were trained on a dataset that contains a wide variety of images. If your dataset is very different from the dataset that the VGG16 model was trained on, then you may want to consider fine-tuning the model on your own dataset.
-* To fine-tune the model, you would simply need to set the trainable attribute of the base_model to True and train the model as usual. This will allow the model to learn new weights that are specific to your dataset. <br>
+* The base_model variable is created by loading the pre-trained Xception model, but removing the top output layer. This helps to use the model as a feature extractor for a specific binary classification problem.
+* The model_xception variable is created by adding the platform model to the Sequential model, then adding the Flatten, Dense, and Dropout classes to create a composite model.
+* The weights of the base model (base_model) are set to non-trainable (trainable=False), meaning these weights will not be updated during training.
+* The model is compiled using the binary_crossentropy loss function, Adam optimizer, and metric accuracy to monitor model performance during training and evaluation.
+* If your dataset is significantly different from the dataset the Xception model was pre-trained on, you may consider fine-tuning the model on your dataset. To do this, you need to set the base_model's trainable property to True and train the model as usual. This allows the model to learn new weights that are appropriate for your dataset. <br>
 
 ### Resnet Network: <br>
 The model is built using the following steps:
@@ -102,13 +98,13 @@ The model is built using the following steps:
 
 ### Result training:
 <br>
-<br> <img width="600" alt="RGB" src="results/training_validation_plot_cnn.png">
-<br> <img width="600" alt="RGB" src="results/training_validation_plot_resnet.png">
-<br> <img width="600" alt="RGB" src="results/training_validation_plot_xcept.png">
+<br> <img width="650" alt="RGB" src="results/training_validation_plot_cnn.png">
+<br> <img width="650" alt="RGB" src="results/training_validation_plot_resnet.png">
+<br> <img width="650" alt="RGB" src="results/training_validation_plot_xcept.png">
 ### Output samples:
 <br>
-<br> <img width="600" alt="RGB" src="results/predict_fire.png">
-<br> <img width="600" alt="RGB" src="results/predict_nonfire.png">
+<br> <img width="450" alt="RGB" src="results/predict_fire.png">
+<br> <img width="450" alt="RGB" src="results/predict_nonfire.png">
 
 ### **Technologies used**
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -128,3 +124,7 @@ The model is built using the following steps:
 [github]: https://github.com/
 [python]: https://www.python.org/
 [sklearn]: https://scikit-learn.org/stable/
+
+### Authors
+
+Pham Duc Long
