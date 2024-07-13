@@ -102,7 +102,7 @@ The model is built using the following steps:
 
 ###Result training:
 <br>
-<br> <img width="395" alt="RGB" src="results/training_validation_plot_resnet.png">
+<br> <img width="600" alt="RGB" src="results/training_validation_plot_resnet.png">
 
 
 ### **Technologies used**
