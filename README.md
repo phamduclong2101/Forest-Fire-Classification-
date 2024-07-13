@@ -100,10 +100,15 @@ The model is built using the following steps:
 * This model is likely to achieve good performance on a variety of image classification tasks. However, it is important to note that the ResNet50 pre-trained weights were trained on a dataset that contains a wide variety of images. If your dataset is very different from the dataset that the ResNet50 model was trained on, then you may want to consider fine-tuning the model on your own dataset.
 * To fine-tune the model, you would simply need to set the trainable attribute of the resnet_50 model to True and train the model as usual. This will allow the model to learn new weights that are specific to your dataset.
 
-###Result training:
+### Result training:
 <br>
+<br> <img width="600" alt="RGB" src="results/training_validation_plot_cnn.png">
 <br> <img width="600" alt="RGB" src="results/training_validation_plot_resnet.png">
-
+<br> <img width="600" alt="RGB" src="results/training_validation_plot_xcept.png">
+### Output samples:
+<br>
+<br> <img width="600" alt="RGB" src="results/predict_fire.png">
+<br> <img width="600" alt="RGB" src="results/predict_nonfire.png">
 
 ### **Technologies used**
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
