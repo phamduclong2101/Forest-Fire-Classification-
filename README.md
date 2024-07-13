@@ -128,3 +128,8 @@ The model is built using the following steps:
 ### Authors
 
 Pham Duc Long
+
+
+### Acknowledgments
+* "https://blog.roboflow.com/what-is-resnet-50/"
+* "https://arxiv.org/abs/1610.02357"
