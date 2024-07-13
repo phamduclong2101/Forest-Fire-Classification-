@@ -100,6 +100,7 @@ The model is built using the following steps:
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_cnn.png">
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_resnet.png">
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_xcept.png">
+
 ### Output samples:
 <br>
 <br> <img width="450" alt="RGB" src="results/predict_fire.png">
