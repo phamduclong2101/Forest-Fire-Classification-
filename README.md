@@ -97,8 +97,13 @@ The model is built using the following steps:
 
 ### Result training:
 <br>
+#### CNN model:
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_cnn.png">
+
+#### Resnet model:
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_resnet.png">
+
+#### Xception model:
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_xcept.png">
 
 ### Output samples:
