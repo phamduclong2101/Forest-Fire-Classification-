@@ -97,6 +97,7 @@ The model is built using the following steps:
 
 ### Result training:
 <br>
+
 #### CNN model:
 <br> <img width="650" alt="RGB" src="results/training_validation_plot_cnn.png">
 
